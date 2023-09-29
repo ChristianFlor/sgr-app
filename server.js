@@ -23,7 +23,7 @@ app.post('/get-response', async (req, res) => {
     const response = await fetch("https://api.openai.com/v1/engines/davinci/completions", {
         method: "POST",
         headers: {
-            "Authorization": `Bearer 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`,
+            "Authorization": `Bearer key`,
             "Content-Type": "application/json"
         },
         body: JSON.stringify({
