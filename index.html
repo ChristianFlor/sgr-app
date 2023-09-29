@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario para ChatGPT</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+
+<div class="container mt-5">
+    <h2 class="text-center mb-4">SGR </h2>
+
+    <div class="card mb-4">
+        <div class="card-body">
+            <h3>Paso a paso secuencia didáctica</h3>
+            <h4>Básica primaria: 1.° a 3.° año</h4>
+            <p>Nivel básico intermedio de lectura y escritura</p>
+            <h4>Actividad en el aula</h4>
+        
+            <h5>1. Objetivos de aprendizaje</h5>
+            <ul>
+                <li><strong>General:</strong> Fomentar la cultura y la mentalidad en ciencia, tecnología e innovación en niños de 5 a 10 años.</li>
+                <li><strong>Específico:</strong> Adentrar a los estudiantes a los saberes de la biología, específicamente explicarles de donde viene la vida. En esta actividad el estudiante aprenderá de dónde vienen las flores y cómo eran las plantas al principio del mundo, esto con el objetivo de, como lo menciona el MEN (Ministerio de Educación Nacional) (2006), “contribuir a la formación del pensamiento científico y del pensamiento crítico en los y las estudiantes colombianas” (p, 113).</li>
+            </ul>
+        
+            <h5>2. Introducción</h5>
+            <p>En un primer momento el profesor deberá explicar a los estudiantes en qué consisten las ciencias naturales o la competencia de ciencias naturales. Por este motivo el docente tendrá que mencionar que está cuenta con 3 componentes principales qué, además, tienen una coherencia horizontal de acuerdo con la siguiente imagen:</p>
+            <!--<img src="path_to_your_image" alt="Imagen I" class="img-fluid mb-3">-->
+            <p><em>(Imagen I). Tomado de: Ministerio de Educación Nacional (2006).</em></p>
+        
+            <p>Para el MEN el conocimiento disciplinar no es un punto de partida es una meta, por eso...</p>
+        
+            <ul>
+                <li><strong>Entorno vivo:</strong> Es una conexión de las competencias de biología, química y física. Su aprendizaje tiene como objetivo...</li>
+                <li><strong>Entorno físico:</strong> Es una conexión de las competencias de biología, química, física y geografía...</li>
+                <li><strong>Relación entre ciencia, tecnología y sociedad (CTS):</strong> Se refiere a las diferentes competencias...</li>
+            </ul>
+        
+            <h5>3. Disposición</h5>
+            <p>Teniendo en cuenta la coherencia horizontal que mencioné anteriormente, el MEN estipula que de primero a tercero los y las estudiantes atraviesan diferentes disposiciones que deben ser alimentadas y apoyadas por el docente:</p>
+            <!--<img src="path_to_your_second_image" alt="Imagen II" class="img-fluid mb-3">-->
+            <p><em>(Imagen II). Tomado de: Ministerio de Educación Nacional (2006).</em></p>
+        </div>
+        
+    </div>
+    <h2 class="text-center">Formulario para ChatGPT</h2>
+    <div class="card mt-4">
+        <div class="card-body">
+            <form id="gptForm">
+                <div class="form-group">
+                    <label for="intencion">Intención comunicativa:</label>
+                    <select class="form-control" id="intencion" name="intencion">
+                        <option value="Narrativa">Narrativa</option>
+                        <option value="Informativa">Informativa</option>
+                        <option value="Explicativa">Explicativa</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="objetivo">Objetivo o meta:</label>
+                    <select class="form-control" id="objetivo" name="objetivo">
+                        <option value="Cognitivo">Cognitivo</option>
+                        <option value="Emotivo">Emotivo</option>
+                        <option value="Persuasivo">Persuasivo</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="ideaCentral">Idea Central:</label>
+                    <textarea class="form-control" id="ideaCentral" name="ideaCentral" rows="3"></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label for="tema">Tema:</label>
+                    <textarea class="form-control" id="tema" name="tema" rows="3"></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label for="contexto">Contexto del tema:</label>
+                    <textarea class="form-control" id="contexto" name="contexto" rows="3"></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label for="audiencia">Auditorio / audiencia:</label>
+                    <textarea class="form-control" id="audiencia" name="audiencia" rows="3"></textarea>
+                </div>
+
+                <div class="form-group text-center">
+                    <button type="button" class="btn btn-primary" id="generateButton">Generar Prompt</button>
+
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script src="script.js"></script> 
+</body>
+</html>
