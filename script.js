@@ -9,7 +9,7 @@ async function generatePrompt() {
     let audiencia = document.getElementById('audiencia').value;
 
     let prompt = `Generar un plan de escritura/oralidad con la siguiente información: \nTema: ${tema} \nContexto: ${contexto} \nIntención Comunicativa: ${intencion} \nObjetivo o meta: ${objetivo} \nIdea central: ${ideaCentral} \nAuditorio / audiencia: ${audiencia}`;
-
+    console.log(prompt);
     let response = await fetch("/get-response", {
         method: "POST",
         headers: {
@@ -22,10 +22,16 @@ async function generatePrompt() {
 
     if (response.ok) {
         let data = await response.json();
-        let generatedText = data.choices[0].text.trim();
-        alert(generatedText);
+        console.log(data);
+        if (data && data.choices && data.choices.length > 0) {
+            let generatedText = data.choices[0].text.trim();
+            alert(generatedText);
+        } else {
+            alert('La respuesta no tiene la estructura esperada.');
+        }
     } else {
         alert('Error al obtener respuesta del servidor.');
     }
+    
 }
 
