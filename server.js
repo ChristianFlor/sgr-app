@@ -11,7 +11,6 @@ const PORT = 3000;
 
 app.use(express.static(__dirname));
 
-// Usa middleware CORS para permitir solicitudes de cualquier origen
 app.use(cors());
 
 app.use(express.json());
@@ -44,7 +43,6 @@ app.post('/get-response', async (req, res) => {
     });
     
     const data = await response.json();
-    
     res.json(data);
 });
 
