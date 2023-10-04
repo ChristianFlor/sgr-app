@@ -8,7 +8,7 @@ async function generatePrompt() {
     let contexto = document.getElementById('contexto').value;
     let audiencia = document.getElementById('audiencia').value;
 
-    let prompt = `Generar un plan de escritura/oralidad con la siguiente información: \nTema: ${tema} \nContexto: ${contexto} \nIntención Comunicativa: ${intencion} \nObjetivo o meta: ${objetivo} \nIdea central: ${ideaCentral} \nAuditorio / audiencia: ${audiencia}`;
+    let prompt = `Generar un plan de escritura/oralidad con la siguiente información para facilitar el desarrollo del pensamiento científico en niños y niñas ente 5 y 10 años: \nTema: ${tema} \nContexto: ${contexto} \nIntención Comunicativa: ${intencion} \nObjetivo o meta: ${objetivo} \nIdea central: ${ideaCentral} \nAuditorio / audiencia: ${audiencia}`;
     console.log(prompt);
     let response = await fetch("/get-response", {
         method: "POST",
