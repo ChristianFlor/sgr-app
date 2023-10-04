@@ -7,7 +7,7 @@ const cors = require('cors');
 require('dotenv').config();
 const app = express();
 const PORT = 3000;
-
+const savedPrompts = [];
 
 app.use(express.static(__dirname));
 
@@ -28,7 +28,7 @@ app.post('/get-response', async (req, res) => {
     const dataToSend = {
         model: "gpt-3.5-turbo-16k",
         messages: [
-            { role: "system", content: "You are a helpful assistant." }, // Este es un mensaje del sistema que puedes ajustar según tus necesidades.
+            { role: "system", content: "Eres un asistente que dará respuesta a niños entre 5 a 10 años" }, 
             { role: "user", content: userInput }
         ]
     };
@@ -44,6 +44,13 @@ app.post('/get-response', async (req, res) => {
     
     const data = await response.json();
     res.json(data);
+});
+
+app.post('/save-prompt', (req, res) => {
+    const promptValue = req.body.prompt;
+    savedPrompts.push(promptValue);
+    console.log(savedPrompts);
+    res.json({ message: "Prompt saved successfully!" });
 });
 
 app.listen(PORT, () => {

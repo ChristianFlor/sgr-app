@@ -9,7 +9,6 @@ async function generatePrompt() {
     let audiencia = document.getElementById('audiencia').value;
 
     let prompt = `Generar un plan de escritura/oralidad con la siguiente información para facilitar el desarrollo del pensamiento científico en niños y niñas ente 5 y 10 años: \nTema: ${tema} \nContexto: ${contexto} \nIntención Comunicativa: ${intencion} \nObjetivo o meta: ${objetivo} \nIdea central: ${ideaCentral} \nAuditorio / audiencia: ${audiencia}`;
-    console.log(prompt);
     let response = await fetch("/get-response", {
         method: "POST",
         headers: {
@@ -19,10 +18,11 @@ async function generatePrompt() {
             prompt: prompt
         })
     });
+    // ... Resto del código de generatePrompt
+    saveGeneratedPrompt(prompt);
 
     if (response.ok) {
         let data = await response.json();
-        console.log(data);
         if (data && data.choices && data.choices.length > 0 && data.choices[0].message && data.choices[0].message.content) {
             let generatedText = data.choices[0].message.content.trim();
             document.getElementById('gptResult').innerText = generatedText;
@@ -34,4 +34,23 @@ async function generatePrompt() {
     }
     
 }
+async function saveGeneratedPrompt(promptValue) {
+    let response = await fetch("/save-prompt", {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify({
+            prompt: promptValue
+        })
+    });
+
+    if (response.ok) {
+        console.log("Prompt saved successfully!");
+        
+    } else {
+        console.error("Error saving prompt.");
+    }
+}
+
 
