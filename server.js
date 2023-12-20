@@ -43,7 +43,7 @@ app.post('/get-response', async (req, res) => {
     });
     
     const data = await response.json();
-    console.log(data);
+    
     res.json(data);
 });
 

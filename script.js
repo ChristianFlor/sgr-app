@@ -19,7 +19,7 @@ async function generatePrompt() {
 
     if (response.ok) {
         let data = await response.json();
-        console.log(data);
+        
         if (data && data.choices && data.choices.length > 0 && data.choices[0].message && data.choices[0].message.content) {
             let generatedText = data.choices[0].message.content.trim();
             document.getElementById('gptResult').innerText = generatedText;
