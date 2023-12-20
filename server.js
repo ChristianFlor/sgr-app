@@ -28,7 +28,7 @@ app.post('/get-response', async (req, res) => {
     const dataToSend = {
         model: "gpt-3.5-turbo-16k",
         messages: [
-            { role: "system", content: "Eres un asistente que dará respuesta a niños entre 5 a 10 años" }, 
+            { role: "system", content: "Eres un asistente que dará respuesta a niños entre 9 a 10 años" }, 
             { role: "user", content: userInput }
         ]
     };
@@ -43,6 +43,7 @@ app.post('/get-response', async (req, res) => {
     });
     
     const data = await response.json();
+    console.log(data);
     res.json(data);
 });
 

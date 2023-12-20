@@ -204,55 +204,23 @@
         
     </div>
     <h2 class="text-center"><span class="icon">&#x1F52C;</span> ¡Hablemos de Ciencia con ChatGPT!</h2>
-    <p class="text-center">Completa el formulario y obtén respuestas asombrosas.</p>
+    <p class="text-center">Completa estas preguntas y obtén respuestas asombrosas.</p>
     <div class="card mt-4" style="background-color: #FFDDCC;">
         <div class="card-body">
             <h3 class="text-center mb-4" style="color: #FF6699; font-size: 24px;">¡Vamos a escribir!</h3>
             
             <form id="gptForm">
     
-                <!-- Intención -->
+                <!-- Tema -->
                 <div class="form-group">
-                    <label for="intencion">¿Qué tipo de historia quieres?</label>
-                    <select class="form-control" id="intencion" name="intencion" style="font-size: 18px;">
-                        <option value="Narrativa">Un cuento</option>
-                        <option value="Informativa">Información</option>
-                        <option value="Explicativa">Explicación</option>
-                    </select>
-                </div>
-    
-                <!-- Objetivo o meta -->
-                <div class="form-group">
-                    <label for="objetivo">¿Cuál es tu objetivo?</label>
-                    <select class="form-control" id="objetivo" name="objetivo" style="font-size: 18px;">
-                        <option value="Cognitivo">Aprender algo nuevo 🧠</option>
-                        <option value="Emotivo">Sentir algo ❤️</option>
-                        <option value="Persuasivo">Convencer a alguien 👍</option>
-                    </select>
+                    <label for="tema">¿De cuál de los temas que vimos en clase te gustaria hablar? 🌎</label>
+                    <textarea class="form-control" id="tema" name="tema" rows="2" style="font-size: 18px;"></textarea>
                 </div>
     
                 <!-- Idea central -->
                 <div class="form-group">
-                    <label for="ideaCentral">Dime la idea principal de tu historia:</label>
+                    <label for="ideaCentral">¿Y qué les quieres decir a tus compañeros acerca de ese tema? 🧑👩</label>
                     <textarea class="form-control" id="ideaCentral" name="ideaCentral" rows="2" style="font-size: 18px;"></textarea>
-                </div>
-    
-                <!-- Tema -->
-                <div class="form-group">
-                    <label for="tema">¿De qué quieres hablar?</label>
-                    <textarea class="form-control" id="tema" name="tema" rows="2" style="font-size: 18px;"></textarea>
-                </div>
-    
-                <!-- Contexto -->
-                <div class="form-group">
-                    <label for="contexto">¿Dónde sucede tu historia o de qué situación hablas? 🌎</label>
-                    <textarea class="form-control" id="contexto" name="contexto" rows="2" style="font-size: 18px;"></textarea>
-                </div>
-    
-                <!-- Audiencia -->
-                <div class="form-group">
-                    <label for="audiencia">¿Para quién es tu historia? 🧑👩</label>
-                    <textarea class="form-control" id="audiencia" name="audiencia" rows="2" style="font-size: 18px;"></textarea>
                 </div>
     
                 <div class="form-group text-center">
